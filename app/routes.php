@@ -29,3 +29,13 @@ Route::get('users', function()
 });
 
 Route::get('ivan', array('uses'=>'IvanController@action_index'));
+
+Route::get('git_test', function()
+{
+    return 'Trying to git!';
+});
+
+Route::get('amend_test', function()
+{
+    return 'Trying to amend!';
+});
