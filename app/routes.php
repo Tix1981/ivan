@@ -16,11 +16,16 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('ivan', array('uses' => 'views.ivan.index'));
+//Route::get('ivan', array('uses' => 'views.ivan.index'));
 
 /*Route::get('/users', function()
 {
     return 'Ivan Kostadinovic';
 });*/
 
-Route::get('users', 'UserController@getIndex');
+Route::get('users', function()
+{
+    return 'This works!';
+});
+
+Route::get('ivan', array('uses'=>'IvanController@action_index'));
